@@ -3,16 +3,39 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
+const servicos = [
+  "Rebaixamento",
+  "Pintura Interna",
+  "Pintura Externa",
+  "Divisórias",
+  "3D",
+];
+
 const ContactSection = () => {
-  const [form, setForm] = useState({ nome: "", telefone: "", servico: "", mensagem: "" });
+  const [form, setForm] = useState({ nome: "", telefone: "", mensagem: "" });
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [showMsgError, setShowMsgError] = useState(false);
+
+  const toggleService = (s: string) => {
+    setSelectedServices((prev) =>
+      prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s]
+    );
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.mensagem.trim()) {
+      setShowMsgError(true);
+      return;
+    }
+    setShowMsgError(false);
     toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    setForm({ nome: "", telefone: "", servico: "", mensagem: "" });
+    setForm({ nome: "", telefone: "", mensagem: "" });
+    setSelectedServices([]);
   };
 
   return (
@@ -43,17 +66,43 @@ const ContactSection = () => {
               onChange={(e) => setForm({ ...form, telefone: e.target.value })}
               required
             />
-            <Input
-              placeholder="Tipo de serviço (Pintura, Rebaixamento...)"
-              value={form.servico}
-              onChange={(e) => setForm({ ...form, servico: e.target.value })}
-            />
-            <Textarea
-              placeholder="Sua mensagem"
-              value={form.mensagem}
-              onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-              rows={4}
-            />
+
+            <div>
+              <p className="text-sm font-medium mb-2 text-foreground">Tipo de Serviço</p>
+              <div className="flex flex-wrap gap-3">
+                {servicos.map((s) => (
+                  <label key={s} className="flex items-center gap-2 cursor-pointer">
+                    <Checkbox
+                      checked={selectedServices.includes(s)}
+                      onCheckedChange={() => toggleService(s)}
+                    />
+                    <span className="text-sm text-foreground">{s}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <Textarea
+                placeholder="Sua mensagem"
+                value={form.mensagem}
+                onChange={(e) => {
+                  setForm({ ...form, mensagem: e.target.value });
+                  if (e.target.value.trim()) setShowMsgError(false);
+                }}
+                rows={4}
+                required
+              />
+              <p className="text-xs text-destructive mt-1">
+                * Obrigatório — Informe se o telefone é WhatsApp ou residencial e descreva brevemente o serviço desejado.
+              </p>
+              {showMsgError && (
+                <p className="text-xs text-destructive font-semibold mt-1">
+                  Por favor, preencha a mensagem.
+                </p>
+              )}
+            </div>
+
             <Button variant="cta" type="submit" className="w-full">
               Enviar Mensagem
             </Button>
@@ -69,15 +118,15 @@ const ContactSection = () => {
             <h3 className="font-display font-bold text-xl text-primary">Informações de Contato</h3>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Phone size={20} className="text-secondary shrink-0" />
-              <span>(11) 99999-9999</span>
+              <span>(21) 96903-6086</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Mail size={20} className="text-secondary shrink-0" />
-              <span>contato@pinturaspro.com.br</span>
+              <span>rcpinturasrebaixamentos@gmail.com</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <MapPin size={20} className="text-secondary shrink-0" />
-              <span>São Paulo, SP</span>
+              <span>Rio de Janeiro, RJ</span>
             </div>
             <div className="mt-8 p-6 bg-muted rounded-lg">
               <p className="font-display font-semibold text-primary mb-2">Horário de Atendimento</p>
