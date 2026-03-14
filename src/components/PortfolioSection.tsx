@@ -2,11 +2,15 @@ import { motion } from "framer-motion";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
 
 const projects = [
   { img: portfolio1, title: "Quarto com Rebaixamento", category: "Rebaixamento" },
   { img: portfolio2, title: "Fachada Comercial", category: "Pintura Externa" },
   { img: portfolio3, title: "Cozinha Moderna", category: "Rebaixamento" },
+  { img: portfolio4, title: "Sala com Placa 3D", category: "Placa 3D" },
+  { img: portfolio5, title: "Escritório com Divisórias", category: "Divisória de Drywall" },
 ];
 
 const PortfolioSection = () => (
