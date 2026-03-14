@@ -6,11 +6,11 @@ import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
 
 const projects = [
-  { img: portfolio1, title: "Quarto com Rebaixamento", category: "Rebaixamento" },
-  { img: portfolio2, title: "Fachada Comercial", category: "Pintura Externa" },
-  { img: portfolio3, title: "Cozinha Moderna", category: "Rebaixamento" },
-  { img: portfolio4, title: "Sala com Placa 3D", category: "Placa 3D" },
-  { img: portfolio5, title: "Escritório com Divisórias", category: "Divisória de Drywall" },
+  { img: portfolio1, title: "Rebaixamento de Teto", category: "Rebaixamento" },
+  { img: portfolio2, title: "Pintura de Fachada", category: "Pintura Externa" },
+  { img: portfolio3, title: "Pintura de Quarto", category: "Pintura Interna" },
+  { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" },
+  { img: portfolio5, title: "Divisória de Drywall", category: "Divisória" },
 ];
 
 const PortfolioSection = () => (
