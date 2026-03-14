@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Paintbrush, Home, Layers } from "lucide-react";
+import { Paintbrush, Home, Layers, LayoutGrid, Box } from "lucide-react";
 
 const services = [
   {
@@ -14,8 +14,18 @@ const services = [
   },
   {
     icon: Layers,
-    title: "Rebaixamento de Teto",
-    description: "Instalação de forro de gesso e drywall com iluminação embutida, design moderno e acabamento perfeito.",
+    title: "Rebaixamento de Teto com Drywall",
+    description: "Instalação de forro de drywall com iluminação embutida, design moderno e acabamento perfeito para qualquer ambiente.",
+  },
+  {
+    icon: LayoutGrid,
+    title: "Divisórias de Drywall",
+    description: "Criação de ambientes com divisórias de drywall, solução rápida, limpa e versátil para residências e escritórios.",
+  },
+  {
+    icon: Box,
+    title: "Colocação de Placa 3D",
+    description: "Instalação de placas 3D decorativas que transformam paredes em verdadeiras obras de arte com textura e elegância.",
   },
 ];
 
