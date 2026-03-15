@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
@@ -15,8 +16,15 @@ const servicos = [
   "3D",
 ];
 
+const tiposTelefone = [
+  { value: "whatsapp", label: "WhatsApp" },
+  { value: "residencial", label: "Telefone Residencial" },
+  { value: "comercial", label: "Telefone Comercial" },
+];
+
 const ContactSection = () => {
   const [form, setForm] = useState({ nome: "", telefone: "", mensagem: "" });
+  const [tipoTelefone, setTipoTelefone] = useState("whatsapp");
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [showMsgError, setShowMsgError] = useState(false);
 
@@ -36,6 +44,7 @@ const ContactSection = () => {
     toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
     setForm({ nome: "", telefone: "", mensagem: "" });
     setSelectedServices([]);
+    setTipoTelefone("whatsapp");
   };
 
   return (
@@ -61,11 +70,23 @@ const ContactSection = () => {
               required
             />
             <Input
-              placeholder="Telefone / WhatsApp"
+              placeholder="Telefone"
               value={form.telefone}
               onChange={(e) => setForm({ ...form, telefone: e.target.value })}
               required
             />
+
+            <div>
+              <p className="text-sm font-medium mb-2 text-foreground">Tipo de Telefone</p>
+              <RadioGroup value={tipoTelefone} onValueChange={setTipoTelefone} className="flex flex-wrap gap-4">
+                {tiposTelefone.map((t) => (
+                  <label key={t.value} className="flex items-center gap-2 cursor-pointer">
+                    <RadioGroupItem value={t.value} />
+                    <span className="text-sm text-foreground">{t.label}</span>
+                  </label>
+                ))}
+              </RadioGroup>
+            </div>
 
             <div>
               <p className="text-sm font-medium mb-2 text-foreground">Tipo de Serviço</p>
@@ -94,7 +115,7 @@ const ContactSection = () => {
                 required
               />
               <p className="text-xs text-destructive mt-1">
-                * Obrigatório — Informe se o telefone é WhatsApp ou residencial e descreva brevemente o serviço desejado.
+                * Obrigatório — Descreva brevemente o serviço desejado.
               </p>
               {showMsgError && (
                 <p className="text-xs text-destructive font-semibold mt-1">
