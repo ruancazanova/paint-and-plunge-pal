@@ -7,6 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const servicos = [
   "Rebaixamento",
@@ -34,17 +35,40 @@ const ContactSection = () => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.mensagem.trim()) {
       setShowMsgError(true);
       return;
     }
     setShowMsgError(false);
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    setForm({ nome: "", telefone: "", mensagem: "" });
-    setSelectedServices([]);
-    setTipoTelefone("whatsapp");
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          nome: form.nome,
+          telefone: form.telefone,
+          tipoTelefone,
+          servicos: selectedServices,
+          mensagem: form.mensagem,
+        },
+      });
+
+      if (error) throw error;
+
+      toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+      setForm({ nome: "", telefone: "", mensagem: "" });
+      setSelectedServices([]);
+      setTipoTelefone("whatsapp");
+    } catch (err) {
+      console.error('Erro ao enviar:', err);
+      toast.error("Erro ao enviar mensagem. Tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -124,8 +148,8 @@ const ContactSection = () => {
               )}
             </div>
 
-            <Button variant="cta" type="submit" className="w-full">
-              Enviar Mensagem
+            <Button variant="cta" type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
             </Button>
           </motion.form>
 
