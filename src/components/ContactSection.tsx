@@ -143,7 +143,7 @@ const ContactSection = () => {
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Mail size={20} className="text-secondary shrink-0" />
-              <span>rcpinturasrebaixamentos@gmail.com</span>
+              <span>rcpinturaserebaixamentos@gmail.com</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <MapPin size={20} className="text-secondary shrink-0" />
