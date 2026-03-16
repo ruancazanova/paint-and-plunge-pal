@@ -48,11 +48,11 @@ const WhyChooseUsSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {items.map((item) => (
             <div key={item.title} className="flex flex-col items-start">
-              <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5 shadow-md">
+              <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5 shadow-md group cursor-pointer">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 group-active:-translate-y-2 group-active:scale-105"
                 />
               </div>
               <h3 className="font-display font-bold text-lg text-foreground mb-2">
