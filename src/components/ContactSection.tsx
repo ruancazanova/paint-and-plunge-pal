@@ -148,8 +148,8 @@ const ContactSection = () => {
               )}
             </div>
 
-            <Button variant="cta" type="submit" className="w-full">
-              Enviar Mensagem
+            <Button variant="cta" type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
             </Button>
           </motion.form>
 
