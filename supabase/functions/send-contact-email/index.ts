@@ -63,7 +63,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         from: 'RC Pinturas <onboarding@resend.dev>',
-        to: ['rcpinturaserebaixamentos@gmail.com'],
+        to: ['rgcruan91@gmail.com'],
         subject: `Novo Orçamento - ${nome || 'Cliente'}`,
         html: htmlContent,
       }),
