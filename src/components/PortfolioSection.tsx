@@ -1,7 +1,9 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion, AnimatePresence } from "framer-motion";
+import { Images, X } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
+import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
@@ -18,106 +20,123 @@ import ceiling8 from "@/assets/ceiling-8.jpg";
 import ceiling9 from "@/assets/ceiling-9.jpg";
 import ceiling10 from "@/assets/ceiling-10.jpg";
 
-const portfolioCategories = {
-  rebaixamento: [
-    { img: ceiling1, title: "Rebaixamento de Teto 1", category: "Rebaixamento teto" },
-    { img: ceiling2, title: "Rebaixamento de Teto 2", category: "Rebaixamento teto" },
-    { img: ceiling3, title: "Rebaixamento de Teto 3", category: "Rebaixamento teto" },
-    { img: ceiling4, title: "Rebaixamento de Teto 4", category: "Rebaixamento teto" },
-    { img: ceiling5, title: "Rebaixamento de Teto 5", category: "Rebaixamento teto" },
-    { img: ceiling6, title: "Rebaixamento de Teto 6", category: "Rebaixamento teto" },
-    { img: ceiling7, title: "Rebaixamento de Teto 7", category: "Rebaixamento teto" },
-    { img: ceiling8, title: "Rebaixamento de Teto 8", category: "Rebaixamento teto" },
-    { img: ceiling9, title: "Rebaixamento de Teto 9", category: "Rebaixamento teto" },
-    { img: ceiling10, title: "Rebaixamento de Teto 10", category: "Rebaixamento teto" },
-  ],
-  externa: [{ img: portfolio2, title: "Pintura de Fachada", category: "Pintura externa" }],
-  interna: [{ img: portfolio3, title: "Pintura de Quarto", category: "Pintura interna" }],
-  placa3d: [{ img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" }],
-  divisoria: [{ img: portfolio5, title: "Divisória de Drywall", category: "Divisória" }],
-} as const;
+const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10];
 
-const categoryLabels = [
-  { value: "rebaixamento", label: "Rebaixamento teto" },
-  { value: "externa", label: "Pintura externa" },
-  { value: "interna", label: "Pintura interna" },
-  { value: "placa3d", label: "Placa 3D" },
-  { value: "divisoria", label: "Divisória" },
-] as const;
+const projects = [
+  { img: portfolio1, title: "Rebaixamento de Teto", category: "Rebaixamento", gallery: ceilingImages },
+  { img: portfolio2, title: "Pintura de Fachada", category: "Pintura Externa" },
+  { img: portfolio3, title: "Pintura de Quarto", category: "Pintura Interna" },
+  { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" },
+  { img: portfolio5, title: "Divisória de Drywall", category: "Divisória" },
+];
 
 const PortfolioSection = () => {
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [activeGallery, setActiveGallery] = useState<{ title: string; images: string[] } | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleCardClick = (project: typeof projects[0]) => {
+    if (project.gallery) {
+      setActiveGallery({ title: project.title, images: project.gallery });
+      setGalleryOpen(true);
+    }
+  };
 
   return (
     <section id="portfolio" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display font-bold text-3xl md:text-4xl text-primary mb-4">Nosso Portfólio</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">Clique nas categorias e veja nossos trabalhos recentes.</p>
+          <p className="text-muted-foreground max-w-xl mx-auto">Confira alguns dos nossos trabalhos recentes.</p>
         </div>
-
-        <Tabs defaultValue="rebaixamento" className="w-full">
-          <div className="flex justify-center mb-8 overflow-x-auto">
-            <TabsList className="h-auto flex-wrap gap-2 rounded-full bg-muted/70 p-2">
-              {categoryLabels.map((category) => (
-                <TabsTrigger
-                  key={category.value}
-                  value={category.value}
-                  className="rounded-full px-4 py-2 data-[state=active]:bg-background data-[state=active]:text-primary"
-                >
-                  {category.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </div>
-
-          {categoryLabels.map((category) => (
-            <TabsContent key={category.value} value={category.value} className="mt-0">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                {portfolioCategories[category.value].map((project, i) => (
-                  <motion.button
-                    key={project.title}
-                    type="button"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.06, duration: 0.45 }}
-                    whileHover={{ y: -8 }}
-                    className="group relative overflow-hidden rounded-2xl text-left aspect-[4/5] w-full"
-                    onClick={() => setSelectedImage(project.img)}
-                  >
-                    <img
-                      src={project.img}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent opacity-90 flex items-end">
-                      <div className="p-4 md:p-6">
-                        <span className="text-xs font-medium text-primary-foreground/80">{project.category}</span>
-                        <h3 className="font-display font-bold text-primary-foreground text-base md:text-lg">{project.title}</h3>
-                      </div>
-                    </div>
-                  </motion.button>
-                ))}
+        <div className="grid md:grid-cols-3 gap-6">
+          {projects.map((p, i) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              whileHover={{ y: -10 }}
+              className={`group relative rounded-lg overflow-hidden aspect-[4/3] ${p.gallery ? "cursor-pointer" : ""}`}
+              onClick={() => handleCardClick(p)}
+            >
+              <img src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/60 transition-colors duration-300 flex items-end">
+                <div className="p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="text-xs font-medium text-accent">{p.category}</span>
+                  <h3 className="font-display font-bold text-primary-foreground text-lg">{p.title}</h3>
+                  {p.gallery && (
+                    <span className="inline-flex items-center gap-1 text-primary-foreground/80 text-xs mt-1">
+                      <Images size={14} /> Ver galeria
+                    </span>
+                  )}
+                </div>
               </div>
-            </TabsContent>
+            </motion.div>
           ))}
-        </Tabs>
+        </div>
       </div>
 
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-primary/90 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            src={selectedImage}
-            alt="Imagem ampliada do portfólio"
-            className="max-h-[90vh] max-w-full rounded-xl object-contain"
-            onClick={(event) => event.stopPropagation()}
-          />
-        </div>
+      {/* Gallery Modal */}
+      {activeGallery && (
+        <Dialog open={galleryOpen} onOpenChange={setGalleryOpen}>
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="font-display text-2xl text-primary">{activeGallery.title}</DialogTitle>
+            </DialogHeader>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+              {activeGallery.images.map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08, duration: 0.4 }}
+                  whileHover={{ y: -8 }}
+                  className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
+                  onClick={() => setSelectedImage(img)}
+                >
+                  <img
+                    src={img}
+                    alt={`${activeGallery.title} - Foto ${i + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
+                </motion.div>
+              ))}
+            </div>
+          </DialogContent>
+        </Dialog>
       )}
+
+      {/* Fullscreen Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 text-white/80 hover:text-white z-[101]"
+            >
+              <X size={32} />
+            </button>
+            <motion.img
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              src={selectedImage}
+              alt={activeGallery?.title ?? "Imagem do portfólio"}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
