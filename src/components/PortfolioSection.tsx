@@ -9,6 +9,12 @@ import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
 
+import salaEstarImg from "@/assets/sala-estar.jpg";
+import cozinhaImg from "@/assets/cozinha.jpg";
+import quartoImg from "@/assets/quarto.jpg";
+import banheiroImg from "@/assets/banheiro.jpg";
+import salaJantarImg from "@/assets/sala-jantar.jpg";
+
 import ceiling1 from "@/assets/ceiling-1.jpg";
 import ceiling2 from "@/assets/ceiling-2.jpg";
 import ceiling3 from "@/assets/ceiling-3.jpg";
@@ -37,12 +43,12 @@ const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pi
 const projects = [
   { img: portfolio1, title: "Rebaixamento de Teto", category: "Rebaixamento", gallery: ceilingImages },
   { img: portfolio2, title: "Pintura Externa", category: "Pintura", gallery: pinturaExtImages },
-  { img: portfolio3, title: "Sala de Estar", category: "Pintura Interna" },
-  { img: portfolio3, title: "Cozinha", category: "Pintura Interna" },
-  { img: portfolio3, title: "Quarto", category: "Pintura Interna" },
+  { img: salaEstarImg, title: "Sala de Estar", category: "Pintura Interna" },
+  { img: cozinhaImg, title: "Cozinha", category: "Pintura Interna" },
+  { img: quartoImg, title: "Quarto", category: "Pintura Interna" },
   { img: portfolio3, title: "Closet", category: "Pintura Interna" },
-  { img: portfolio3, title: "Banheiro", category: "Pintura Interna" },
-  { img: portfolio3, title: "Sala de Jantar", category: "Pintura Interna" },
+  { img: banheiroImg, title: "Banheiro", category: "Pintura Interna" },
+  { img: salaJantarImg, title: "Sala de Jantar", category: "Pintura Interna" },
   { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" },
   { img: portfolio5, title: "Divisória de Drywall", category: "Divisória" },
 ];
