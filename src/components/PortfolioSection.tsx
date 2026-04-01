@@ -39,6 +39,8 @@ import pinturaExt7 from "@/assets/pintura-ext-7.jpg";
 import pinturaExt8 from "@/assets/pintura-ext-8.jpg";
 import pinturaExt9 from "@/assets/pintura-ext-9.jpg";
 import pinturaExt10 from "@/assets/pintura-ext-10.jpg";
+import pinturaExt11 from "@/assets/pintura-ext-11.jpg";
+import pinturaExt12 from "@/assets/pintura-ext-12.jpg";
 
 const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10];
 const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pinturaExt5, pinturaExt6, pinturaExt7, pinturaExt8, pinturaExt9, pinturaExt10];
