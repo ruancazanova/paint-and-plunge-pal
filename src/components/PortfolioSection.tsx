@@ -9,6 +9,12 @@ import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
 
+import salaEstarImg from "@/assets/sala-estar.jpg";
+import cozinhaImg from "@/assets/cozinha.jpg";
+import quartoImg from "@/assets/quarto.jpg";
+import banheiroImg from "@/assets/banheiro.jpg";
+import salaJantarImg from "@/assets/sala-jantar.jpg";
+
 import ceiling1 from "@/assets/ceiling-1.jpg";
 import ceiling2 from "@/assets/ceiling-2.jpg";
 import ceiling3 from "@/assets/ceiling-3.jpg";
