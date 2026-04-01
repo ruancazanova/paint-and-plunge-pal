@@ -26,6 +26,8 @@ import ceiling7 from "@/assets/ceiling-7.jpg";
 import ceiling8 from "@/assets/ceiling-8.jpg";
 import ceiling9 from "@/assets/ceiling-9.jpg";
 import ceiling10 from "@/assets/ceiling-10.jpg";
+import ceiling11 from "@/assets/ceiling-11.jpg";
+import ceiling12 from "@/assets/ceiling-12.jpg";
 
 import pinturaExt1 from "@/assets/pintura-ext-1.jpg";
 import pinturaExt2 from "@/assets/pintura-ext-2.jpg";
