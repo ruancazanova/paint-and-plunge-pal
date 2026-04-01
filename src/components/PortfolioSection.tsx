@@ -20,11 +20,23 @@ import ceiling8 from "@/assets/ceiling-8.jpg";
 import ceiling9 from "@/assets/ceiling-9.jpg";
 import ceiling10 from "@/assets/ceiling-10.jpg";
 
+import pinturaExt1 from "@/assets/pintura-ext-1.jpg";
+import pinturaExt2 from "@/assets/pintura-ext-2.jpg";
+import pinturaExt3 from "@/assets/pintura-ext-3.jpg";
+import pinturaExt4 from "@/assets/pintura-ext-4.jpg";
+import pinturaExt5 from "@/assets/pintura-ext-5.jpg";
+import pinturaExt6 from "@/assets/pintura-ext-6.jpg";
+import pinturaExt7 from "@/assets/pintura-ext-7.jpg";
+import pinturaExt8 from "@/assets/pintura-ext-8.jpg";
+import pinturaExt9 from "@/assets/pintura-ext-9.jpg";
+import pinturaExt10 from "@/assets/pintura-ext-10.jpg";
+
 const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10];
+const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pinturaExt5, pinturaExt6, pinturaExt7, pinturaExt8, pinturaExt9, pinturaExt10];
 
 const projects = [
   { img: portfolio1, title: "Rebaixamento de Teto", category: "Rebaixamento", gallery: ceilingImages },
-  { img: portfolio2, title: "Pintura de Fachada", category: "Pintura Externa" },
+  { img: portfolio2, title: "Pintura de Fachada", category: "Pintura Externa", gallery: pinturaExtImages },
   { img: portfolio3, title: "Pintura de Quarto", category: "Pintura Interna" },
   { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" },
   { img: portfolio5, title: "Divisória de Drywall", category: "Divisória" },
