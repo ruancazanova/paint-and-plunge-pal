@@ -14,6 +14,7 @@ import cozinhaImg from "@/assets/cozinha.jpg";
 import quartoImg from "@/assets/quarto.jpg";
 import banheiroImg from "@/assets/banheiro.jpg";
 import salaJantarImg from "@/assets/sala-jantar.jpg";
+import closetImg from "@/assets/closet.jpg";
 
 import ceiling1 from "@/assets/ceiling-1.jpg";
 import ceiling2 from "@/assets/ceiling-2.jpg";
