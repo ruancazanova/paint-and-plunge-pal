@@ -47,7 +47,7 @@ const projects = [
   { img: salaEstarImg, title: "Sala de Estar", category: "Pintura Interna" },
   { img: cozinhaImg, title: "Cozinha", category: "Pintura Interna" },
   { img: quartoImg, title: "Quarto", category: "Pintura Interna" },
-  { img: portfolio3, title: "Closet", category: "Pintura Interna" },
+  { img: closetImg, title: "Closet", category: "Pintura Interna" },
   { img: banheiroImg, title: "Banheiro", category: "Pintura Interna" },
   { img: salaJantarImg, title: "Sala de Jantar", category: "Pintura Interna" },
   { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" },
