@@ -26,6 +26,8 @@ import ceiling7 from "@/assets/ceiling-7.jpg";
 import ceiling8 from "@/assets/ceiling-8.jpg";
 import ceiling9 from "@/assets/ceiling-9.jpg";
 import ceiling10 from "@/assets/ceiling-10.jpg";
+import ceiling11 from "@/assets/ceiling-11.jpg";
+import ceiling12 from "@/assets/ceiling-12.jpg";
 
 import pinturaExt1 from "@/assets/pintura-ext-1.jpg";
 import pinturaExt2 from "@/assets/pintura-ext-2.jpg";
@@ -37,9 +39,11 @@ import pinturaExt7 from "@/assets/pintura-ext-7.jpg";
 import pinturaExt8 from "@/assets/pintura-ext-8.jpg";
 import pinturaExt9 from "@/assets/pintura-ext-9.jpg";
 import pinturaExt10 from "@/assets/pintura-ext-10.jpg";
+import pinturaExt11 from "@/assets/pintura-ext-11.jpg";
+import pinturaExt12 from "@/assets/pintura-ext-12.jpg";
 
-const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10];
-const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pinturaExt5, pinturaExt6, pinturaExt7, pinturaExt8, pinturaExt9, pinturaExt10];
+const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10, ceiling11, ceiling12];
+const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pinturaExt5, pinturaExt6, pinturaExt7, pinturaExt8, pinturaExt9, pinturaExt10, pinturaExt11, pinturaExt12];
 
 const projects = [
   { img: portfolio1, title: "Rebaixamento de Teto", category: "Rebaixamento", gallery: ceilingImages },
