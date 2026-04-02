@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
 
@@ -16,6 +15,7 @@ import banheiroImg from "@/assets/banheiro.jpg";
 import salaJantarImg from "@/assets/sala-jantar.jpg";
 import closetImg from "@/assets/closet.jpg";
 
+// Ceiling gallery
 import ceiling1 from "@/assets/ceiling-1.jpg";
 import ceiling2 from "@/assets/ceiling-2.jpg";
 import ceiling3 from "@/assets/ceiling-3.jpg";
@@ -29,6 +29,7 @@ import ceiling10 from "@/assets/ceiling-10.jpg";
 import ceiling11 from "@/assets/ceiling-11.jpg";
 import ceiling12 from "@/assets/ceiling-12.jpg";
 
+// Pintura externa gallery
 import pinturaExt1 from "@/assets/pintura-ext-1.jpg";
 import pinturaExt2 from "@/assets/pintura-ext-2.jpg";
 import pinturaExt3 from "@/assets/pintura-ext-3.jpg";
@@ -42,20 +43,140 @@ import pinturaExt10 from "@/assets/pintura-ext-10.jpg";
 import pinturaExt11 from "@/assets/pintura-ext-11.jpg";
 import pinturaExt12 from "@/assets/pintura-ext-12.jpg";
 
+// Sala de Estar gallery
+import salaEstar1 from "@/assets/sala-estar-1.jpg";
+import salaEstar2 from "@/assets/sala-estar-2.jpg";
+import salaEstar3 from "@/assets/sala-estar-3.jpg";
+import salaEstar4 from "@/assets/sala-estar-4.jpg";
+import salaEstar5 from "@/assets/sala-estar-5.jpg";
+import salaEstar6 from "@/assets/sala-estar-6.jpg";
+import salaEstar7 from "@/assets/sala-estar-7.jpg";
+import salaEstar8 from "@/assets/sala-estar-8.jpg";
+import salaEstar9 from "@/assets/sala-estar-9.jpg";
+import salaEstar10 from "@/assets/sala-estar-10.jpg";
+import salaEstar11 from "@/assets/sala-estar-11.jpg";
+import salaEstar12 from "@/assets/sala-estar-12.jpg";
+
+// Cozinha gallery
+import cozinha1 from "@/assets/cozinha-1.jpg";
+import cozinha2 from "@/assets/cozinha-2.jpg";
+import cozinha3 from "@/assets/cozinha-3.jpg";
+import cozinha4 from "@/assets/cozinha-4.jpg";
+import cozinha5 from "@/assets/cozinha-5.jpg";
+import cozinha6 from "@/assets/cozinha-6.jpg";
+import cozinha7 from "@/assets/cozinha-7.jpg";
+import cozinha8 from "@/assets/cozinha-8.jpg";
+import cozinha9 from "@/assets/cozinha-9.jpg";
+import cozinha10 from "@/assets/cozinha-10.jpg";
+import cozinha11 from "@/assets/cozinha-11.jpg";
+import cozinha12 from "@/assets/cozinha-12.jpg";
+
+// Quarto gallery
+import quarto1 from "@/assets/quarto-1.jpg";
+import quarto2 from "@/assets/quarto-2.jpg";
+import quarto3 from "@/assets/quarto-3.jpg";
+import quarto4 from "@/assets/quarto-4.jpg";
+import quarto5 from "@/assets/quarto-5.jpg";
+import quarto6 from "@/assets/quarto-6.jpg";
+import quarto7 from "@/assets/quarto-7.jpg";
+import quarto8 from "@/assets/quarto-8.jpg";
+import quarto9 from "@/assets/quarto-9.jpg";
+import quarto10 from "@/assets/quarto-10.jpg";
+import quarto11 from "@/assets/quarto-11.jpg";
+import quarto12 from "@/assets/quarto-12.jpg";
+
+// Banheiro gallery
+import banheiro1 from "@/assets/banheiro-1.jpg";
+import banheiro2 from "@/assets/banheiro-2.jpg";
+import banheiro3 from "@/assets/banheiro-3.jpg";
+import banheiro4 from "@/assets/banheiro-4.jpg";
+import banheiro5 from "@/assets/banheiro-5.jpg";
+import banheiro6 from "@/assets/banheiro-6.jpg";
+import banheiro7 from "@/assets/banheiro-7.jpg";
+import banheiro8 from "@/assets/banheiro-8.jpg";
+import banheiro9 from "@/assets/banheiro-9.jpg";
+import banheiro10 from "@/assets/banheiro-10.jpg";
+import banheiro11 from "@/assets/banheiro-11.jpg";
+import banheiro12 from "@/assets/banheiro-12.jpg";
+
+// Sala de Jantar gallery
+import salaJantar1 from "@/assets/sala-jantar-1.jpg";
+import salaJantar2 from "@/assets/sala-jantar-2.jpg";
+import salaJantar3 from "@/assets/sala-jantar-3.jpg";
+import salaJantar4 from "@/assets/sala-jantar-4.jpg";
+import salaJantar5 from "@/assets/sala-jantar-5.jpg";
+import salaJantar6 from "@/assets/sala-jantar-6.jpg";
+import salaJantar7 from "@/assets/sala-jantar-7.jpg";
+import salaJantar8 from "@/assets/sala-jantar-8.jpg";
+import salaJantar9 from "@/assets/sala-jantar-9.jpg";
+import salaJantar10 from "@/assets/sala-jantar-10.jpg";
+import salaJantar11 from "@/assets/sala-jantar-11.jpg";
+import salaJantar12 from "@/assets/sala-jantar-12.jpg";
+
+// Closet gallery
+import closet1 from "@/assets/closet-1.jpg";
+import closet2 from "@/assets/closet-2.jpg";
+import closet3 from "@/assets/closet-3.jpg";
+import closet4 from "@/assets/closet-4.jpg";
+import closet5 from "@/assets/closet-5.jpg";
+import closet6 from "@/assets/closet-6.jpg";
+import closet7 from "@/assets/closet-7.jpg";
+import closet8 from "@/assets/closet-8.jpg";
+import closet9 from "@/assets/closet-9.jpg";
+import closet10 from "@/assets/closet-10.jpg";
+import closet11 from "@/assets/closet-11.jpg";
+import closet12 from "@/assets/closet-12.jpg";
+
+// Placa 3D gallery
+import placa3d1 from "@/assets/placa3d-1.jpg";
+import placa3d2 from "@/assets/placa3d-2.jpg";
+import placa3d3 from "@/assets/placa3d-3.jpg";
+import placa3d4 from "@/assets/placa3d-4.jpg";
+import placa3d5 from "@/assets/placa3d-5.jpg";
+import placa3d6 from "@/assets/placa3d-6.jpg";
+import placa3d7 from "@/assets/placa3d-7.jpg";
+import placa3d8 from "@/assets/placa3d-8.jpg";
+import placa3d9 from "@/assets/placa3d-9.jpg";
+import placa3d10 from "@/assets/placa3d-10.jpg";
+import placa3d11 from "@/assets/placa3d-11.jpg";
+import placa3d12 from "@/assets/placa3d-12.jpg";
+
+// Divisória gallery
+import divisoria1 from "@/assets/divisoria-1.jpg";
+import divisoria2 from "@/assets/divisoria-2.jpg";
+import divisoria3 from "@/assets/divisoria-3.jpg";
+import divisoria4 from "@/assets/divisoria-4.jpg";
+import divisoria5 from "@/assets/divisoria-5.jpg";
+import divisoria6 from "@/assets/divisoria-6.jpg";
+import divisoria7 from "@/assets/divisoria-7.jpg";
+import divisoria8 from "@/assets/divisoria-8.jpg";
+import divisoria9 from "@/assets/divisoria-9.jpg";
+import divisoria10 from "@/assets/divisoria-10.jpg";
+import divisoria11 from "@/assets/divisoria-11.jpg";
+import divisoria12 from "@/assets/divisoria-12.jpg";
+
 const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10, ceiling11, ceiling12];
 const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pinturaExt5, pinturaExt6, pinturaExt7, pinturaExt8, pinturaExt9, pinturaExt10, pinturaExt11, pinturaExt12];
+const salaEstarImages = [salaEstar1, salaEstar2, salaEstar3, salaEstar4, salaEstar5, salaEstar6, salaEstar7, salaEstar8, salaEstar9, salaEstar10, salaEstar11, salaEstar12];
+const cozinhaImages = [cozinha1, cozinha2, cozinha3, cozinha4, cozinha5, cozinha6, cozinha7, cozinha8, cozinha9, cozinha10, cozinha11, cozinha12];
+const quartoImages = [quarto1, quarto2, quarto3, quarto4, quarto5, quarto6, quarto7, quarto8, quarto9, quarto10, quarto11, quarto12];
+const banheiroImages = [banheiro1, banheiro2, banheiro3, banheiro4, banheiro5, banheiro6, banheiro7, banheiro8, banheiro9, banheiro10, banheiro11, banheiro12];
+const salaJantarImages = [salaJantar1, salaJantar2, salaJantar3, salaJantar4, salaJantar5, salaJantar6, salaJantar7, salaJantar8, salaJantar9, salaJantar10, salaJantar11, salaJantar12];
+const closetImages = [closet1, closet2, closet3, closet4, closet5, closet6, closet7, closet8, closet9, closet10, closet11, closet12];
+const placa3dImages = [placa3d1, placa3d2, placa3d3, placa3d4, placa3d5, placa3d6, placa3d7, placa3d8, placa3d9, placa3d10, placa3d11, placa3d12];
+const divisoriaImages = [divisoria1, divisoria2, divisoria3, divisoria4, divisoria5, divisoria6, divisoria7, divisoria8, divisoria9, divisoria10, divisoria11, divisoria12];
 
 const projects = [
   { img: portfolio1, title: "Rebaixamento de Teto", category: "Rebaixamento", gallery: ceilingImages },
   { img: portfolio2, title: "Pintura Externa", category: "Pintura", gallery: pinturaExtImages },
-  { img: salaEstarImg, title: "Sala de Estar", category: "Pintura Interna" },
-  { img: cozinhaImg, title: "Cozinha", category: "Pintura Interna" },
-  { img: quartoImg, title: "Quarto", category: "Pintura Interna" },
-  { img: closetImg, title: "Closet", category: "Pintura Interna" },
-  { img: banheiroImg, title: "Banheiro", category: "Pintura Interna" },
-  { img: salaJantarImg, title: "Sala de Jantar", category: "Pintura Interna" },
-  { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D" },
-  { img: portfolio5, title: "Divisória de Drywall", category: "Divisória" },
+  { img: salaEstarImg, title: "Sala de Estar", category: "Pintura Interna", gallery: salaEstarImages },
+  { img: cozinhaImg, title: "Cozinha", category: "Pintura Interna", gallery: cozinhaImages },
+  { img: quartoImg, title: "Quarto", category: "Pintura Interna", gallery: quartoImages },
+  { img: closetImg, title: "Closet", category: "Pintura Interna", gallery: closetImages },
+  { img: banheiroImg, title: "Banheiro", category: "Pintura Interna", gallery: banheiroImages },
+  { img: salaJantarImg, title: "Sala de Jantar", category: "Pintura Interna", gallery: salaJantarImages },
+  { img: portfolio4, title: "Parede com Placa 3D", category: "Placa 3D", gallery: placa3dImages },
+  { img: portfolio5, title: "Divisória de Drywall", category: "Divisória", gallery: divisoriaImages },
 ];
 
 const PortfolioSection = () => {
