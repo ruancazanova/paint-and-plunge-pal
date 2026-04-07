@@ -158,7 +158,7 @@ import divisoria12 from "@/assets/divisoria-12.jpg";
 const ceilingImages = [ceiling1, ceiling2, ceiling3, ceiling4, ceiling5, ceiling6, ceiling7, ceiling8, ceiling9, ceiling10, ceiling11, ceiling12];
 const pinturaExtImages = [pinturaExt1, pinturaExt2, pinturaExt3, pinturaExt4, pinturaExt5, pinturaExt6, pinturaExt7, pinturaExt8, pinturaExt9, pinturaExt10, pinturaExt11, pinturaExt12];
 const salaEstarImages = [salaEstar1, salaEstar2, salaEstar3, salaEstar4, salaEstar5, salaEstar6, salaEstar7, salaEstar8, salaEstar9, salaEstar10, salaEstar11, salaEstar12];
-const cozinhaImages = [cozinha1, cozinha2, cozinha3, cozinha4, cozinha5, cozinha6, cozinha7, cozinha8, cozinha9, cozinha10];
+const cozinhaImages = [cozinha1, cozinha2, cozinha3, cozinha4, cozinha5, cozinha6, cozinha7, cozinha8, cozinha9, cozinha10, cozinha11, cozinha12];
 const quartoImages = [quarto1, quarto2, quarto3, quarto4, quarto5, quarto6, quarto7, quarto8, quarto9, quarto10, quarto11, quarto12];
 const banheiroImages = [banheiro1, banheiro2, banheiro3, banheiro4, banheiro5, banheiro6, banheiro7, banheiro8, banheiro9, banheiro10, banheiro11, banheiro12];
 const salaJantarImages = [salaJantar1, salaJantar2, salaJantar3, salaJantar4, salaJantar5, salaJantar6, salaJantar7, salaJantar8, salaJantar9, salaJantar10, salaJantar11, salaJantar12];
