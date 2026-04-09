@@ -177,7 +177,7 @@ const ContactSection = () => {
               <h3 className="font-display font-bold text-xl text-primary mb-4">Redes Sociais</h3>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://w.app/2f9iu4"
+                  href="https://wa.me/5521969036086"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-3 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,38%)] text-white rounded-lg transition-colors"
