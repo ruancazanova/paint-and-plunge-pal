@@ -163,7 +163,7 @@ const ContactSection = () => {
             <h3 className="font-display font-bold text-xl text-primary">Informações de Contato</h3>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Phone size={20} className="text-secondary shrink-0" />
-              <span>(21) 96903-6086</span>
+              <span>(21) 98504-6637</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Mail size={20} className="text-secondary shrink-0" />
@@ -177,7 +177,7 @@ const ContactSection = () => {
               <h3 className="font-display font-bold text-xl text-primary mb-4">Redes Sociais</h3>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://api.whatsapp.com/send?phone=5521969036086"
+                  href="https://api.whatsapp.com/send?phone=5521985046637"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-3 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,38%)] text-white rounded-lg transition-colors"
