@@ -200,7 +200,7 @@ const ContactSection = () => {
             </div>
             <div className="mt-6 p-6 bg-muted rounded-lg">
               <p className="font-display font-semibold text-primary mb-2">Horário de Atendimento</p>
-              <p className="text-sm text-muted-foreground">Seg a Sex: 8h às 18h</p>
+              <p className="text-sm text-muted-foreground">Seg a Sex: 8h às 17h</p>
               <p className="text-sm text-muted-foreground">Sáb: 8h às 12h</p>
             </div>
           </motion.div>
