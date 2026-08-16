@@ -177,7 +177,7 @@ const ContactSection = () => {
               <h3 className="font-display font-bold text-xl text-primary mb-4">Redes Sociais</h3>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://wa.me/5521981679342?text=Olá,%20tudo%20bem?%20👋%0A%0AEncontrei%20a%20**RC%20Pinturas%20&%20Rebaixamentos**%20através%20do%20site%20e%20gostei%20bastante%20do%20trabalho%20de%20vocês.%0A%0AEstou%20querendo%20fazer%20uma%20reforma,%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20e%20solicitar%20um%20orçamento.%0A%0APodem%20me%20passar%20algumas%20informações%20sobre%20como%20funciona?"
+                  href="https://wa.link/ndaw5p"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-3 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,38%)] text-white rounded-lg transition-colors"
